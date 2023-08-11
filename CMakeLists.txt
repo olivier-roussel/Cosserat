@@ -102,8 +102,6 @@ if(SoftRobots_FOUND)
     message("-- Found dependency: 'SoftRobots' plugin.")
 endif()
 
-sofa_install_pythonscripts(PLUGIN_NAME ${PROJECT_NAME} PYTHONSCRIPTS_SOURCE_DIR "python")
-
 find_file(SofaPython3Tools NAMES "SofaPython3/lib/cmake/SofaPython3/SofaPython3Tools.cmake")
 if(SofaPython3Tools)
     message("-- Found SofaPython3Tools.")
@@ -145,6 +143,6 @@ if(COSSERATPLUGIN_BUILD_TESTS)
 endif()
 
 # Config files and install rules for pythons scripts
-sofa_install_pythonscripts(PLUGIN_NAME ${PROJECT_NAME} PYTHONSCRIPTS_SOURCE_DIR "examples/python3/")
+#sofa_install_pythonscripts(PLUGIN_NAME ${PROJECT_NAME} PYTHONSCRIPTS_SOURCE_DIR "examples/python3/")
 
 include(cmake/packaging.cmake)
